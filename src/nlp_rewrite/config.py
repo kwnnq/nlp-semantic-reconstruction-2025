@@ -7,7 +7,10 @@ class Paths:
     data: Path = root / "data"
     outputs: Path = root / "outputs"
     recon: Path = outputs / "reconstructions"
+    analysis: Path = outputs / "analysis"
+    figures: Path = outputs / "figures"
+    bonus: Path = outputs / "bonus"
 
 paths = Paths()
-paths.outputs.mkdir(parents=True, exist_ok=True)
-paths.recon.mkdir(parents=True, exist_ok=True)
+for d in (paths.outputs, paths.recon, paths.analysis, paths.figures, paths.bonus):
+    d.mkdir(parents=True, exist_ok=True)
