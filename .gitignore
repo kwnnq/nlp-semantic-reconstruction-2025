@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+.DS_Store
+Thumbs.db
+
+# Virtual env
+.venv/
+
+# Outputs / models / cache
+outputs/
+models/
+data/cache/
+
+# Env files
+.env
+.env.*

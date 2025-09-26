@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "nlp-semantic-reconstruction-2025"
+version = "0.1.0"
+description = "Semantic reconstruction project"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "nlp_rewrite", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+language-tool-python = "^2.9.4"
+transformers = "^4.56.2"
+torch = "^2.8.0"
+sentence-transformers = "^5.1.1"
+scikit-learn = "^1.7.2"
+pandas = "^2.3.2"
+matplotlib = "^3.10.6"
+
+[tool.poetry.scripts]
+run-rewrite = "nlp_rewrite.run_rewrite:main"
+run-analysis = "nlp_rewrite.analysis:main"
+run-viz = "nlp_rewrite.viz:main"
+run-bonus = "nlp_rewrite.bonus_masked_clause:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
